@@ -42,8 +42,7 @@
             <p class="text-start fs-5">Cadastrar - Agendamento de Potenciais Clientes</p>
             <p class="text-start fs-6">Sistema Utilizado para agendamento de serviços.</p>
             <p>
-                {{#each post}}
-                    {{#dataValues}}
+                {{#with post}}
                         <form action="/atualizar" method="POST">
                             <div class="mb-3 text-start">
                                 <input type="hidden" name="id" class="form-control" id="nome" value="{{id}}">
@@ -67,8 +66,7 @@
                                 <button type="submit" class="btn btn-primary">Atualizar</button>
                             </div>
                         </form>
-                    {{/dataValues}}
-                {{/each}}
+                {{/with}}
             </p>
         </div>
         <div class="col-1">
